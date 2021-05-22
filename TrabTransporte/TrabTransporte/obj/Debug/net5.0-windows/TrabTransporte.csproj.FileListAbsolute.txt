@@ -47,3 +47,6 @@ C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransport
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.genruntimeconfig.cache
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmClienteNovo.resources
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmClienteAlterar.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmTransportadora.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmTransportadoraAlterar.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmTransportadoraNovo.resources
