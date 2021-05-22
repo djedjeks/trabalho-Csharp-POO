@@ -30,6 +30,7 @@ namespace TrabTransporte
         private void InitializeComponent()
         {
             this.produtos = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // produtos
@@ -42,11 +43,22 @@ namespace TrabTransporte
             this.produtos.UseVisualStyleBackColor = true;
             this.produtos.Click += new System.EventHandler(this.produtos_Click);
             // 
+            // btnClientes
+            // 
+            this.btnClientes.Location = new System.Drawing.Point(12, 41);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(75, 23);
+            this.btnClientes.TabIndex = 1;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.produtos);
             this.Name = "FrmPrincipal";
             this.Text = "DT Transportes";
@@ -57,6 +69,7 @@ namespace TrabTransporte
         #endregion
 
         private System.Windows.Forms.Button produtos;
+        private System.Windows.Forms.Button btnClientes;
     }
 }
 

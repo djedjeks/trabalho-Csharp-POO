@@ -4,6 +4,15 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmClienteAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmClienteNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmProduto.cs">
       <SubType>Form</SubType>
     </Compile>

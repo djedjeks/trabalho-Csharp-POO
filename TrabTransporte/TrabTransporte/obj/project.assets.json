@@ -83,11 +83,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\djefe\\source\\repos\\TrabTransporte\\TrabTransporte\\TrabTransporte.csproj",
+      "projectUniqueName": "C:\\Users\\djefe\\Documents\\GitHub\\trabalho-Csharp-POO\\TrabTransporte\\TrabTransporte\\TrabTransporte.csproj",
       "projectName": "TrabTransporte",
-      "projectPath": "C:\\Users\\djefe\\source\\repos\\TrabTransporte\\TrabTransporte\\TrabTransporte.csproj",
+      "projectPath": "C:\\Users\\djefe\\Documents\\GitHub\\trabalho-Csharp-POO\\TrabTransporte\\TrabTransporte\\TrabTransporte.csproj",
       "packagesPath": "C:\\Users\\djefe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\djefe\\source\\repos\\TrabTransporte\\TrabTransporte\\obj\\",
+      "outputPath": "C:\\Users\\djefe\\Documents\\GitHub\\trabalho-Csharp-POO\\TrabTransporte\\TrabTransporte\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\djefe\\AppData\\Roaming\\NuGet\\NuGet.Config",

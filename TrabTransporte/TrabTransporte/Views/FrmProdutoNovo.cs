@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using TrabTransporte.Controlador;
+using TrabTransporte.Modelo;
 
 namespace TrabTransporte.Views
 {
@@ -13,7 +14,7 @@ namespace TrabTransporte.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Modelo.Produto produto = new Modelo.Produto(-1, textBoxCodigo.Text, textBoxDescricao.Text, double.Parse(textBoxPeso.Text));
+            Produto produto = new Produto(-1, textBoxCodigo.Text, textBoxDescricao.Text, double.Parse(textBoxPeso.Text));
             if (ProdutoDB.setIncluiProduto(produto))
             {
                 MessageBox.Show("Produto Incluído com sucesso!");

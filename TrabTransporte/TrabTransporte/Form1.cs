@@ -22,5 +22,10 @@ namespace TrabTransporte
         {
             new FrmProduto().ShowDialog();
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            new FrmCliente().ShowDialog();
+        }
     }
 }
