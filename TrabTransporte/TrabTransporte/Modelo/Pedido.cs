@@ -27,6 +27,17 @@ namespace TrabTransporte.Modelo
             PedidoItems = pedidoItems;
         }
 
+        public Pedido(int id, Cliente cliente, Transportadora transportadora, double valor_total, List<PedidoItem> pedidoItems)
+        {
+            this.id = id;
+            this.cliente = cliente;
+            this.transportadora = transportadora;
+            this.data_emissao = DateTime.Now;
+            this.data_entrega = DateTime.MinValue;
+            this.valor_total = valor_total;
+            PedidoItems = pedidoItems;
+        }
+
         public String cliente_nome()
         {
             return this.cliente.nome_completo;

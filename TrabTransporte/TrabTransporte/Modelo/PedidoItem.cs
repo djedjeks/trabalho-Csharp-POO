@@ -10,7 +10,6 @@ namespace TrabTransporte.Modelo
     {
         public Produto produto { get; set; }
         public int quantidade { get; set; }
-
         public double valor_unitario { get; set; }
 
         public PedidoItem(Produto produto, int quantidade, double valor_unitario)

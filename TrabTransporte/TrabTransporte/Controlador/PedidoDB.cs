@@ -34,7 +34,7 @@ namespace TrabTransporte.Controlador
                             cliente,
                             transportadora,
                             DateTime.Parse(data["data_emissao"].ToString()),
-                            DateTime.Parse(data["data_entrega"].ToString()),
+                            DateTime.MinValue, //data["data_entrega"].ToString() != null ? DateTime.Parse(data["data_entrega"].ToString()) : 
                             double.Parse(data["valor_total"].ToString()),
                             pedidoItens)
                     );
@@ -99,13 +99,12 @@ namespace TrabTransporte.Controlador
                 cmd.Parameters.Add("@clienteId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.cliente.id;
                 cmd.Parameters.Add("@transportadoraId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.transportadora.id;
                 cmd.Parameters.Add("@valorTotal", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedido.valor_total;
-                NpgsqlDataReader data = cmd.ExecuteReader();
 
-                int idPedido = 0;
+                int idPedido = int.Parse(cmd.ExecuteScalar().ToString());
+                
 
-                if (data.Read())
+                if (idPedido > 0)
                 {
-                    idPedido = (int) data["id"];
                     inseriuPedido = true;
                 }
 
@@ -114,7 +113,7 @@ namespace TrabTransporte.Controlador
                     // Realiza uma inserção para cada registro de Item de Pedido
                     foreach (PedidoItem pedidoItem in pedido.PedidoItems)
                     {
-                        NpgsqlCommand cmdItem = new NpgsqlCommand("INSERT INTO PEDIDO_ITEM (PEDIDO_ID, PRODUTO_ID, QUANTIDADE, VALOR_UNITARIO) VALUES (@pedidoId, @produtoId, @quantidade, @valorUnitario) RETURNING ID", conexao);
+                        NpgsqlCommand cmdItem = new NpgsqlCommand("INSERT INTO PEDIDO_ITEM (PEDIDO_ID, PRODUTO_ID, QUANTIDADE, VALOR_UNITARIO) VALUES (@pedidoId, @produtoId, @quantidade, @valorUnitario)", conexao);
                         cmdItem.Parameters.Add("@pedidoId", NpgsqlTypes.NpgsqlDbType.Integer).Value = idPedido;
                         cmdItem.Parameters.Add("@produtoId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.produto.id;
                         cmdItem.Parameters.Add("@quantidade", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.quantidade;

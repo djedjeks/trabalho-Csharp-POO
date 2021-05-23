@@ -122,7 +122,9 @@ namespace TrabTransporte.Views
             this.dataGridViewProdutos.RowTemplate.Height = 25;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(514, 281);
             this.dataGridViewProdutos.TabIndex = 20;
+            this.dataGridViewProdutos.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellLeave);
             this.dataGridViewProdutos.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewProdutos_DefaultValuesNeeded);
+            this.dataGridViewProdutos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewProdutos_EditingControlShowing);
             // 
             // produto
             // 
