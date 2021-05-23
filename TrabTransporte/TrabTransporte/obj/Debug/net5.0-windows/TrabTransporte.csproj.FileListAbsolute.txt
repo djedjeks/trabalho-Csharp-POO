@@ -50,3 +50,6 @@ C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransport
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmTransportadora.resources
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmTransportadoraAlterar.resources
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmTransportadoraNovo.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedido.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedidoDetalhes.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedidoNovo.resources

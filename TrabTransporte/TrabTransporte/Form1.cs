@@ -32,5 +32,10 @@ namespace TrabTransporte
         {
             new FrmTransportadora().ShowDialog();
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            new FrmPedido().ShowDialog();
+        }
     }
 }

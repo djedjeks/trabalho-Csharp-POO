@@ -32,6 +32,7 @@ namespace TrabTransporte
             this.produtos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnTransportadoras = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // produtos
@@ -64,11 +65,23 @@ namespace TrabTransporte
             this.btnTransportadoras.UseVisualStyleBackColor = true;
             this.btnTransportadoras.Click += new System.EventHandler(this.btnTransportadoras_Click);
             // 
+            // btnPedidos
+            // 
+            this.btnPedidos.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPedidos.Location = new System.Drawing.Point(344, 12);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(444, 225);
+            this.btnPedidos.TabIndex = 3;
+            this.btnPedidos.Text = "PEDIDOS";
+            this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.btnTransportadoras);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.produtos);
@@ -83,6 +96,7 @@ namespace TrabTransporte
         private System.Windows.Forms.Button produtos;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnTransportadoras;
+        private System.Windows.Forms.Button btnPedidos;
     }
 }
 

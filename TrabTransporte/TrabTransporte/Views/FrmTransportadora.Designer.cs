@@ -43,6 +43,8 @@ namespace TrabTransporte.Views
             // 
             // dataGridViewTransportadoras
             // 
+            this.dataGridViewTransportadoras.AllowUserToAddRows = false;
+            this.dataGridViewTransportadoras.AllowUserToDeleteRows = false;
             this.dataGridViewTransportadoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTransportadoras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -52,6 +54,7 @@ namespace TrabTransporte.Views
             this.estado});
             this.dataGridViewTransportadoras.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewTransportadoras.Name = "dataGridViewTransportadoras";
+            this.dataGridViewTransportadoras.ReadOnly = true;
             this.dataGridViewTransportadoras.RowTemplate.Height = 25;
             this.dataGridViewTransportadoras.Size = new System.Drawing.Size(577, 383);
             this.dataGridViewTransportadoras.TabIndex = 1;
@@ -69,12 +72,14 @@ namespace TrabTransporte.Views
             this.cnpj.DataPropertyName = "cnpj";
             this.cnpj.HeaderText = "CNPJ";
             this.cnpj.Name = "cnpj";
+            this.cnpj.ReadOnly = true;
             // 
             // descricao
             // 
             this.descricao.DataPropertyName = "descricao";
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
             this.descricao.Width = 200;
             // 
             // cidade
@@ -82,12 +87,14 @@ namespace TrabTransporte.Views
             this.cidade.DataPropertyName = "cidade";
             this.cidade.HeaderText = "Cidade";
             this.cidade.Name = "cidade";
+            this.cidade.ReadOnly = true;
             // 
             // estado
             // 
             this.estado.DataPropertyName = "estado";
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             // 
             // btnNovo
             // 

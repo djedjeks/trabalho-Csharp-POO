@@ -45,6 +45,8 @@ namespace TrabTransporte.Views
             // 
             // dataGridViewClientes
             // 
+            this.dataGridViewClientes.AllowUserToAddRows = false;
+            this.dataGridViewClientes.AllowUserToDeleteRows = false;
             this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -56,8 +58,9 @@ namespace TrabTransporte.Views
             this.estado});
             this.dataGridViewClientes.Location = new System.Drawing.Point(12, 45);
             this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.ReadOnly = true;
             this.dataGridViewClientes.RowTemplate.Height = 25;
-            this.dataGridViewClientes.Size = new System.Drawing.Size(817, 381);
+            this.dataGridViewClientes.Size = new System.Drawing.Size(716, 381);
             this.dataGridViewClientes.TabIndex = 1;
             // 
             // id
@@ -73,6 +76,7 @@ namespace TrabTransporte.Views
             this.nome_completo.DataPropertyName = "nome_completo";
             this.nome_completo.HeaderText = "Nome Completo";
             this.nome_completo.Name = "nome_completo";
+            this.nome_completo.ReadOnly = true;
             this.nome_completo.Width = 200;
             // 
             // cpf
@@ -80,18 +84,21 @@ namespace TrabTransporte.Views
             this.cpf.DataPropertyName = "cpf";
             this.cpf.HeaderText = "CPF";
             this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
             // 
             // data_nascimento
             // 
             this.data_nascimento.DataPropertyName = "data_nascimento";
             this.data_nascimento.HeaderText = "Data de Nascimento";
             this.data_nascimento.Name = "data_nascimento";
+            this.data_nascimento.ReadOnly = true;
             // 
             // sexo
             // 
             this.sexo.DataPropertyName = "sexo";
             this.sexo.HeaderText = "Sexo";
             this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
             this.sexo.Width = 40;
             // 
             // cidade
@@ -99,6 +106,7 @@ namespace TrabTransporte.Views
             this.cidade.DataPropertyName = "cidade";
             this.cidade.HeaderText = "Cidade";
             this.cidade.Name = "cidade";
+            this.cidade.ReadOnly = true;
             this.cidade.Width = 150;
             // 
             // estado
@@ -106,11 +114,12 @@ namespace TrabTransporte.Views
             this.estado.DataPropertyName = "estado";
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
             this.estado.Width = 50;
             // 
             // btnNovoCliente
             // 
-            this.btnNovoCliente.Location = new System.Drawing.Point(724, 16);
+            this.btnNovoCliente.Location = new System.Drawing.Point(623, 16);
             this.btnNovoCliente.Name = "btnNovoCliente";
             this.btnNovoCliente.Size = new System.Drawing.Size(105, 23);
             this.btnNovoCliente.TabIndex = 2;
@@ -120,7 +129,7 @@ namespace TrabTransporte.Views
             // 
             // btnAlteraCliente
             // 
-            this.btnAlteraCliente.Location = new System.Drawing.Point(613, 432);
+            this.btnAlteraCliente.Location = new System.Drawing.Point(512, 432);
             this.btnAlteraCliente.Name = "btnAlteraCliente";
             this.btnAlteraCliente.Size = new System.Drawing.Size(105, 23);
             this.btnAlteraCliente.TabIndex = 5;
@@ -130,7 +139,7 @@ namespace TrabTransporte.Views
             // 
             // btnDeletaCliente
             // 
-            this.btnDeletaCliente.Location = new System.Drawing.Point(724, 432);
+            this.btnDeletaCliente.Location = new System.Drawing.Point(623, 432);
             this.btnDeletaCliente.Name = "btnDeletaCliente";
             this.btnDeletaCliente.Size = new System.Drawing.Size(105, 23);
             this.btnDeletaCliente.TabIndex = 4;
@@ -142,7 +151,7 @@ namespace TrabTransporte.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 482);
+            this.ClientSize = new System.Drawing.Size(737, 482);
             this.Controls.Add(this.btnAlteraCliente);
             this.Controls.Add(this.btnDeletaCliente);
             this.Controls.Add(this.btnNovoCliente);

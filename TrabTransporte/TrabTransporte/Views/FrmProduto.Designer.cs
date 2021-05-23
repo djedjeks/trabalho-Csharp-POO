@@ -30,18 +30,20 @@ namespace TrabTransporte.Views
         private void InitializeComponent()
         {
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
-            this.btnNovoProduto = new System.Windows.Forms.Button();
-            this.btnDeletaProduto = new System.Windows.Forms.Button();
-            this.btnAlteraProduto = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNovoProduto = new System.Windows.Forms.Button();
+            this.btnDeletaProduto = new System.Windows.Forms.Button();
+            this.btnAlteraProduto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewProdutos
             // 
+            this.dataGridViewProdutos.AllowUserToAddRows = false;
+            this.dataGridViewProdutos.AllowUserToDeleteRows = false;
             this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -50,9 +52,40 @@ namespace TrabTransporte.Views
             this.peso});
             this.dataGridViewProdutos.Location = new System.Drawing.Point(13, 57);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.ReadOnly = true;
             this.dataGridViewProdutos.RowTemplate.Height = 25;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(476, 381);
             this.dataGridViewProdutos.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // codigo
+            // 
+            this.codigo.DataPropertyName = "codigo";
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 200;
+            // 
+            // peso
+            // 
+            this.peso.DataPropertyName = "peso";
+            this.peso.HeaderText = "Peso";
+            this.peso.Name = "peso";
+            this.peso.ReadOnly = true;
             // 
             // btnNovoProduto
             // 
@@ -83,33 +116,6 @@ namespace TrabTransporte.Views
             this.btnAlteraProduto.Text = "Alterar Produto";
             this.btnAlteraProduto.UseVisualStyleBackColor = true;
             this.btnAlteraProduto.Click += new System.EventHandler(this.btnAlteraProduto_Click);
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // codigo
-            // 
-            this.codigo.DataPropertyName = "codigo";
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            // 
-            // descricao
-            // 
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "Descrição";
-            this.descricao.Name = "descricao";
-            this.descricao.Width = 200;
-            // 
-            // peso
-            // 
-            this.peso.DataPropertyName = "peso";
-            this.peso.HeaderText = "Peso";
-            this.peso.Name = "peso";
             // 
             // FrmProduto
             // 

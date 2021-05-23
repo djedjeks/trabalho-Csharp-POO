@@ -13,6 +13,15 @@
     <Compile Update="Views\FrmClienteNovo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmPedidoDetalhes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmPedidoNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmProduto.cs">
       <SubType>Form</SubType>
     </Compile>
