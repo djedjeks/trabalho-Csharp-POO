@@ -14,8 +14,6 @@ namespace TrabTransporte.Views
 {
     public partial class FrmTransportadora : Form
     {
-        private object dataGridViewProdutos;
-
         public FrmTransportadora()
         {
             InitializeComponent();

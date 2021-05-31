@@ -21,7 +21,7 @@ namespace TrabTransporte.Views
 
             textBoxPedidoId.Text = this.pedido.id.ToString();
             textBoxDataEmissao.Text = this.pedido.data_emissao.ToString();
-            textBoxDataEntrega.Text = this.pedido.data_entrega.ToString();
+            textBoxDataEntrega.Text = this.pedido.data_entrega == DateTime.MinValue ? "" : this.pedido.data_entrega.ToString();
             textBoxValorTotal.Text = this.pedido.valor_total.ToString();
 
             textBoxClienteNome.Text = this.pedido.cliente.nome_completo;
@@ -45,7 +45,6 @@ namespace TrabTransporte.Views
                     pedidoItem.produto.peso
                 );
             }
-            
         }
     }
 }

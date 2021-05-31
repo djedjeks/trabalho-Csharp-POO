@@ -34,7 +34,7 @@ namespace TrabTransporte.Controlador
                             cliente,
                             transportadora,
                             DateTime.Parse(data["data_emissao"].ToString()),
-                            DateTime.MinValue, //data["data_entrega"].ToString() != null ? DateTime.Parse(data["data_entrega"].ToString()) : 
+                            data.IsDBNull(4) ? DateTime.MinValue : DateTime.Parse(data["data_entrega"].ToString()), 
                             double.Parse(data["valor_total"].ToString()),
                             pedidoItens)
                     );
@@ -101,7 +101,7 @@ namespace TrabTransporte.Controlador
                 cmd.Parameters.Add("@valorTotal", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedido.valor_total;
 
                 int idPedido = int.Parse(cmd.ExecuteScalar().ToString());
-                
+
 
                 if (idPedido > 0)
                 {
@@ -123,7 +123,7 @@ namespace TrabTransporte.Controlador
                     }
                     inseriuItensPedido = true;
                 }
-                
+
                 conexao.Close();
             }
             catch (NpgsqlException e)
@@ -131,6 +131,92 @@ namespace TrabTransporte.Controlador
                 MessageBox.Show("Erro de SQL: " + e.Message);
             }
             return inseriuPedido && inseriuItensPedido;
+        }
+
+        public static bool setAlteraPedido(Pedido pedido)
+        {
+            bool alterouPedido = false;
+            bool alterouItensPedido = false;
+
+            try
+            {
+                NpgsqlConnection conexao = Conexao.GetConexao();
+
+                NpgsqlCommand cmd = new NpgsqlCommand("UPDATE PEDIDO SET CLIENTE_ID = @cliente_id, TRANSPORTADORA_ID = @transportadora_id, DATA_ENTREGA = @data_entrega, VALOR_TOTAL = @valor_total WHERE ID = @id", conexao);
+                cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
+                cmd.Parameters.Add("@clienteId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.cliente.id;
+                cmd.Parameters.Add("@transportadoraId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.transportadora.id;
+                cmd.Parameters.Add("@valorTotal", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedido.valor_total;
+                cmd.Parameters.Add("@data_entrega", NpgsqlTypes.NpgsqlDbType.Timestamp).Value = pedido.data_entrega;
+                
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    alterouPedido = true;
+                }
+
+                if (alterouPedido)
+                {
+                    NpgsqlCommand cmdProdutos = new NpgsqlCommand("SELECT * FROM PEDIDO_ITEM WHERE pedido_id = @pedido_id", conexao);
+                    cmdProdutos.Parameters.Add("@pedido_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
+
+                    NpgsqlDataReader data = cmdProdutos.ExecuteReader();
+
+                    List<int> produtosPedido = new List<int>();
+
+                    while (data.Read())
+                    {
+                        produtosPedido.Add((int)data["produto_id"]);
+                    }
+                    data.Close();
+
+                    // Realiza uma inserção para cada registro de Item de Pedido
+                    foreach (PedidoItem pedidoItem in pedido.PedidoItems)
+                    {
+                        MessageBox.Show("Produto a ser alterado: " + pedidoItem.produto.id + " => " + produtosPedido.Contains(pedidoItem.produto.id));
+                        if (produtosPedido.Contains(pedidoItem.produto.id))
+                        {
+                            NpgsqlCommand cmdItem = new NpgsqlCommand("UPDATE PEDIDO_ITEM SET QUANTIDADE = @quantidade, VALOR_UNITARIO = @valor_unitario WHERE PEDIDO_ID = @pedido_id AND PRODUTO_ID = @produto_id", conexao);
+                            cmdItem.Parameters.Add("@pedido_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
+                            cmdItem.Parameters.Add("@produto_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.produto.id;
+                            cmdItem.Parameters.Add("@quantidade", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.quantidade;
+                            cmdItem.Parameters.Add("@valor_unitario", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedidoItem.valor_unitario;
+
+                            cmdItem.ExecuteNonQuery();
+                            produtosPedido.Remove(pedidoItem.produto.id);
+                        } else
+                        {
+                            NpgsqlCommand cmdItem = new NpgsqlCommand("INSERT INTO PEDIDO_ITEM (PEDIDO_ID, PRODUTO_ID, QUANTIDADE, VALOR_UNITARIO) VALUES (@pedidoId, @produtoId, @quantidade, @valorUnitario)", conexao);
+                            cmdItem.Parameters.Add("@pedidoId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
+                            cmdItem.Parameters.Add("@produtoId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.produto.id;
+                            cmdItem.Parameters.Add("@quantidade", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.quantidade;
+                            cmdItem.Parameters.Add("@valorUnitario", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedidoItem.valor_unitario;
+
+                            cmdItem.ExecuteNonQuery();
+                        }
+                    }
+
+                    if(produtosPedido.Count > 0)
+                    {
+                        foreach(int p in produtosPedido)
+                        {
+                            NpgsqlCommand cmdItem = new NpgsqlCommand("DELETE FROM PEDIDO_ITEM WHERE PEDIDO_ID = @pedido_id AND PRODUTO_ID = @produto_id", conexao);
+                            cmdItem.Parameters.Add("@pedido_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
+                            cmdItem.Parameters.Add("@produto_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = p;
+
+                            cmdItem.ExecuteNonQuery();
+                        }
+                    }
+
+                    alterouItensPedido = true;
+                }
+
+                conexao.Close();
+            }
+            catch (NpgsqlException e)
+            {
+                MessageBox.Show("Erro de SQL: " + e.Message);
+            }
+            return alterouPedido && alterouItensPedido;
         }
 
         private static Cliente getCliente(int idCliente)

@@ -32,7 +32,7 @@ namespace TrabTransporte.Views
                     pedido.cliente.nome_completo,
                     pedido.transportadora.descricao,
                     pedido.data_emissao,
-                    pedido.data_entrega,
+                    pedido.data_entrega == DateTime.MinValue ? "" : pedido.data_entrega,
                     pedido.valor_total
                     );
             }
@@ -57,14 +57,33 @@ namespace TrabTransporte.Views
 
         private void btnAlterarPedido_Click(object sender, EventArgs e)
         {
+            int pedidoIdSelecionado = int.Parse(dataGridViewPedidos.CurrentRow.Cells[0].Value.ToString());
+            Pedido pedidoS = null;
+            
+            foreach(Pedido p in this.pedidos)
+            {
+                if(p.id == pedidoIdSelecionado)
+                {
+                    pedidoS = p;
+                    break;
+                }
+            }
 
+            if (pedidoS != null)
+            {
+                new FrmPedidoAlterar(pedidoS).ShowDialog();
+            } else
+            {
+                MessageBox.Show("Pedido não encontrado. Selecione um pedido antes de editá-lo.");
+            }
+            atualizaTela();
         }
 
         private void btnDeletarPedido_Click(object sender, EventArgs e)
         {
             int pedidoIdSelecionado = int.Parse(dataGridViewPedidos.CurrentRow.Cells[0].Value.ToString());
 
-            DialogResult dialogResult = MessageBox.Show(null, "Tem certeza que deleja exclur este pedido?? ", "Pedido", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show(null, "Tem certeza que deleja exclur este pedido?", "Pedido", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.OK)
             {
                 if (PedidoDB.setExcluiPedido(pedidoIdSelecionado))
