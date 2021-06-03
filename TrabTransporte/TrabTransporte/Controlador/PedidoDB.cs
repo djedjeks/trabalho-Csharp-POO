@@ -144,9 +144,9 @@ namespace TrabTransporte.Controlador
 
                 NpgsqlCommand cmd = new NpgsqlCommand("UPDATE PEDIDO SET CLIENTE_ID = @cliente_id, TRANSPORTADORA_ID = @transportadora_id, DATA_ENTREGA = @data_entrega, VALOR_TOTAL = @valor_total WHERE ID = @id", conexao);
                 cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
-                cmd.Parameters.Add("@clienteId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.cliente.id;
-                cmd.Parameters.Add("@transportadoraId", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.transportadora.id;
-                cmd.Parameters.Add("@valorTotal", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedido.valor_total;
+                cmd.Parameters.Add("@cliente_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.cliente.id;
+                cmd.Parameters.Add("@transportadora_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.transportadora.id;
+                cmd.Parameters.Add("@valor_total", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedido.valor_total;
                 cmd.Parameters.Add("@data_entrega", NpgsqlTypes.NpgsqlDbType.Timestamp).Value = pedido.data_entrega;
                 
                 if (cmd.ExecuteNonQuery() == 1)

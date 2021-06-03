@@ -282,8 +282,6 @@ namespace TrabTransporte.Views
                 }
 
                 double valorTotal = double.Parse(textBoxValorTotal.Text.Replace(".", ","));
-                this.pedido.cliente = clienteS;
-                this.pedido.transportadora = transportadoraS;
                 this.pedido.valor_total = valorTotal;
                 this.pedido.PedidoItems = itensPedidoS;
                 this.pedido.data_entrega = dateTimePickerDataEntrega.Value;
