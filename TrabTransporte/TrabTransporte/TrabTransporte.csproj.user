@@ -16,6 +16,9 @@
     <Compile Update="Views\FrmPedido.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmPedidoAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmPedidoDetalhes.cs">
       <SubType>Form</SubType>
     </Compile>

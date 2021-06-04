@@ -176,7 +176,7 @@ namespace TrabTransporte.Views
                             int quantidade = int.Parse(dgvr.Cells["quantidade"].Value.ToString());
                             double valorUnitario = double.Parse(dgvr.Cells["valorUnitario"].Value.ToString().Replace(".", ","));
 
-                            itensPedidoS.Add(new PedidoItem(produtoSelecionado, quantidade, valorUnitario));
+                            itensPedidoS.Add(new PedidoItem(-1, produtoSelecionado, quantidade, valorUnitario));
                         } else
                         {
                             MessageBox.Show("Falha ao identificar Produto!");

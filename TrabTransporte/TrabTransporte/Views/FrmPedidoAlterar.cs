@@ -17,6 +17,7 @@ namespace TrabTransporte.Views
         List<Cliente> clientes = new List<Cliente>();
         List<Transportadora> transportadoras = new List<Transportadora>();
         List<Produto> produtos = new List<Produto>();
+        List<int> idProdutoItens = new List<int>();
 
         Pedido pedido = null;
 
@@ -50,6 +51,8 @@ namespace TrabTransporte.Views
 
             foreach (PedidoItem pedidoItem in this.pedido.PedidoItems)
             {
+                idProdutoItens.Add(pedidoItem.id);
+
                 dataGridViewProdutos.Rows.Add();
                 DataGridViewComboBoxCell dcc = (DataGridViewComboBoxCell)dataGridViewProdutos[0, cnt];
                 int produtoIndex = dcc.Items.IndexOf(pedidoItem.produto.id + " - " + pedidoItem.produto.descricao);
@@ -270,7 +273,14 @@ namespace TrabTransporte.Views
                             int quantidade = int.Parse(dgvr.Cells["quantidade"].Value.ToString());
                             double valorUnitario = double.Parse(dgvr.Cells["valorUnitario"].Value.ToString().Replace(".", ","));
 
-                            itensPedidoS.Add(new PedidoItem(produtoSelecionado, quantidade, valorUnitario));
+                            int idPedidoItem = -1;
+                            if(idProdutoItens.Count > 0)
+                            {
+                                idPedidoItem = idProdutoItens[0];
+                                idProdutoItens.RemoveAt(0);
+                            }
+
+                            itensPedidoS.Add(new PedidoItem(idPedidoItem, produtoSelecionado, quantidade, valorUnitario));
                         }
                         else
                         {

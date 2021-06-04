@@ -53,7 +53,6 @@ C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransport
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedido.resources
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedidoDetalhes.resources
 C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedidoNovo.resources
-C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedidoAlterar.resources
 C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.csprojAssemblyReference.cache
 C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.FrmPrincipal.resources
 C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmCliente.resources
@@ -87,3 +86,5 @@ C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\bin\Deb
 C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\bin\Debug\net5.0-windows\Npgsql.dll
 C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.csproj.CopyComplete
 C:\Users\djefe\Desktop\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.genruntimeconfig.cache
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Properties.Resources.resources
+C:\Users\djefe\Documents\GitHub\trabalho-Csharp-POO\TrabTransporte\TrabTransporte\obj\Debug\net5.0-windows\TrabTransporte.Views.FrmPedidoAlterar.resources

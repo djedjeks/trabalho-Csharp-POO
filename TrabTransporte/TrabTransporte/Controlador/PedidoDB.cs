@@ -156,7 +156,7 @@ namespace TrabTransporte.Controlador
 
                 if (alterouPedido)
                 {
-                    NpgsqlCommand cmdProdutos = new NpgsqlCommand("SELECT * FROM PEDIDO_ITEM WHERE pedido_id = @pedido_id", conexao);
+                    NpgsqlCommand cmdProdutos = new NpgsqlCommand("SELECT * FROM PEDIDO_ITEM WHERE pedido_id = @pedido_id ORDER BY PRODUTO_ID, QUANTIDADE", conexao);
                     cmdProdutos.Parameters.Add("@pedido_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
 
                     NpgsqlDataReader data = cmdProdutos.ExecuteReader();
@@ -165,23 +165,24 @@ namespace TrabTransporte.Controlador
 
                     while (data.Read())
                     {
-                        produtosPedido.Add((int)data["produto_id"]);
+                        produtosPedido.Add((int)data["id"]);
                     }
                     data.Close();
 
                     // Realiza uma inserção para cada registro de Item de Pedido
                     foreach (PedidoItem pedidoItem in pedido.PedidoItems)
                     {
-                        if (produtosPedido.Contains(pedidoItem.produto.id))
+                        if (produtosPedido.Contains(pedidoItem.id))
                         {
-                            NpgsqlCommand cmdItem = new NpgsqlCommand("UPDATE PEDIDO_ITEM SET QUANTIDADE = @quantidade, VALOR_UNITARIO = @valor_unitario WHERE PEDIDO_ID = @pedido_id AND PRODUTO_ID = @produto_id", conexao);
+                            NpgsqlCommand cmdItem = new NpgsqlCommand("UPDATE PEDIDO_ITEM SET PRODUTO_ID = @produto_id, QUANTIDADE = @quantidade, VALOR_UNITARIO = @valor_unitario WHERE PEDIDO_ID = @pedido_id AND ID = @id", conexao);
                             cmdItem.Parameters.Add("@pedido_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
+                            cmdItem.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.id;
                             cmdItem.Parameters.Add("@produto_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.produto.id;
                             cmdItem.Parameters.Add("@quantidade", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedidoItem.quantidade;
                             cmdItem.Parameters.Add("@valor_unitario", NpgsqlTypes.NpgsqlDbType.Numeric).Value = pedidoItem.valor_unitario;
 
                             cmdItem.ExecuteNonQuery();
-                            produtosPedido.Remove(pedidoItem.produto.id);
+                            produtosPedido.Remove(pedidoItem.id);
                         } else
                         {
                             NpgsqlCommand cmdItem = new NpgsqlCommand("INSERT INTO PEDIDO_ITEM (PEDIDO_ID, PRODUTO_ID, QUANTIDADE, VALOR_UNITARIO) VALUES (@pedidoId, @produtoId, @quantidade, @valorUnitario)", conexao);
@@ -198,9 +199,8 @@ namespace TrabTransporte.Controlador
                     {
                         foreach(int p in produtosPedido)
                         {
-                            NpgsqlCommand cmdItem = new NpgsqlCommand("DELETE FROM PEDIDO_ITEM WHERE PEDIDO_ID = @pedido_id AND PRODUTO_ID = @produto_id", conexao);
-                            cmdItem.Parameters.Add("@pedido_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = pedido.id;
-                            cmdItem.Parameters.Add("@produto_id", NpgsqlTypes.NpgsqlDbType.Integer).Value = p;
+                            NpgsqlCommand cmdItem = new NpgsqlCommand("DELETE FROM PEDIDO_ITEM WHERE ID = @id ", conexao);
+                            cmdItem.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = p;
 
                             cmdItem.ExecuteNonQuery();
                         }
@@ -283,6 +283,7 @@ namespace TrabTransporte.Controlador
                 NpgsqlConnection conexao = Conexao.GetConexao();
 
                 NpgsqlCommand select = new NpgsqlCommand("SELECT " +
+                    " pi.ID, " +
                     " pi.PEDIDO_ID, " +
                     " pi.PRODUTO_ID, " +
                     " pi.QUANTIDADE, " +
@@ -302,6 +303,7 @@ namespace TrabTransporte.Controlador
                 {
                     pedidoItens.Add(
                         new PedidoItem(
+                            (int)data["id"],
                             new Produto(
                                 (int) data["produto_id"],
                                 data["codigo"].ToString(),
