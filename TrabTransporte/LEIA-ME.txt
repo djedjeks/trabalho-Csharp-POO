@@ -1,0 +1,3 @@
+Para execução é necessário:
+1. Ter um banco de dados chamado "dt_transporte"      
+1.1. Neste banco de dados, executar o restore do mesmo utilizando o arquivo "dt_transporte" na raiz deste projeto
