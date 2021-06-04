@@ -14,6 +14,8 @@ namespace TrabTransporte.Views
 {
     public partial class FrmTransportadora : Form
     {
+        private object dataGridViewProdutos;
+
         public FrmTransportadora()
         {
             InitializeComponent();
@@ -54,6 +56,11 @@ namespace TrabTransporte.Views
                 }
             }
             atualizaTela();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

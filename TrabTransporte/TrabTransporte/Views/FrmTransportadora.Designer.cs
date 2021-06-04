@@ -29,15 +29,17 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransportadora));
             this.dataGridViewTransportadoras = new System.Windows.Forms.DataGridView();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.buttonAlterar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.buttonAlterar = new System.Windows.Forms.Button();
-            this.btnDeletar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransportadoras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,12 +54,42 @@ namespace TrabTransporte.Views
             this.descricao,
             this.cidade,
             this.estado});
-            this.dataGridViewTransportadoras.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewTransportadoras.Location = new System.Drawing.Point(12, 61);
             this.dataGridViewTransportadoras.Name = "dataGridViewTransportadoras";
             this.dataGridViewTransportadoras.ReadOnly = true;
             this.dataGridViewTransportadoras.RowTemplate.Height = 25;
             this.dataGridViewTransportadoras.Size = new System.Drawing.Size(577, 383);
             this.dataGridViewTransportadoras.TabIndex = 1;
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(611, 61);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(104, 38);
+            this.btnNovo.TabIndex = 2;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // buttonAlterar
+            // 
+            this.buttonAlterar.Location = new System.Drawing.Point(611, 105);
+            this.buttonAlterar.Name = "buttonAlterar";
+            this.buttonAlterar.Size = new System.Drawing.Size(104, 35);
+            this.buttonAlterar.TabIndex = 3;
+            this.buttonAlterar.Text = "Alterar";
+            this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(611, 150);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(104, 39);
+            this.btnDeletar.TabIndex = 4;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // id
             // 
@@ -80,7 +112,7 @@ namespace TrabTransporte.Views
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
-            this.descricao.Width = 200;
+            this.descricao.Width = 220;
             // 
             // cidade
             // 
@@ -95,50 +127,37 @@ namespace TrabTransporte.Views
             this.estado.HeaderText = "Estado";
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
+            this.estado.Width = 80;
             // 
-            // btnNovo
+            // label1
             // 
-            this.btnNovo.Location = new System.Drawing.Point(611, 13);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 23);
-            this.btnNovo.TabIndex = 2;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // buttonAlterar
-            // 
-            this.buttonAlterar.Location = new System.Drawing.Point(611, 57);
-            this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
-            this.buttonAlterar.TabIndex = 3;
-            this.buttonAlterar.Text = "Alterar";
-            this.buttonAlterar.UseVisualStyleBackColor = true;
-            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Location = new System.Drawing.Point(611, 110);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletar.TabIndex = 4;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(246, 42);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Transportadoras";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmTransportadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(727, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.buttonAlterar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.dataGridViewTransportadoras);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTransportadora";
-            this.Text = "FrmTransportadora";
+            this.Text = "Transportadoras";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransportadoras)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,12 +165,13 @@ namespace TrabTransporte.Views
 
         private System.Windows.Forms.DataGridView dataGridViewTransportadoras;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button buttonAlterar;
+        private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.Button buttonAlterar;
-        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Label label1;
     }
 }

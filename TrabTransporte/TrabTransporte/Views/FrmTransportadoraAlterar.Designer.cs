@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransportadoraAlterar));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxEstado = new System.Windows.Forms.TextBox();
@@ -45,10 +46,11 @@ namespace TrabTransporte.Views
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(23, 15);
+            this.label2.Location = new System.Drawing.Point(30, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(342, 41);
+            this.label2.Size = new System.Drawing.Size(344, 43);
             this.label2.TabIndex = 16;
             this.label2.Text = "Alterar Transportadora";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -56,7 +58,7 @@ namespace TrabTransporte.Views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 249);
+            this.label3.Location = new System.Drawing.Point(17, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 25;
@@ -64,15 +66,16 @@ namespace TrabTransporte.Views
             // 
             // textBoxEstado
             // 
-            this.textBoxEstado.Location = new System.Drawing.Point(33, 270);
+            this.textBoxEstado.Location = new System.Drawing.Point(17, 269);
+            this.textBoxEstado.MaxLength = 2;
             this.textBoxEstado.Name = "textBoxEstado";
-            this.textBoxEstado.Size = new System.Drawing.Size(250, 23);
+            this.textBoxEstado.Size = new System.Drawing.Size(42, 23);
             this.textBoxEstado.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 191);
+            this.label1.Location = new System.Drawing.Point(17, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 15);
             this.label1.TabIndex = 23;
@@ -80,14 +83,14 @@ namespace TrabTransporte.Views
             // 
             // textBoxCidade
             // 
-            this.textBoxCidade.Location = new System.Drawing.Point(33, 212);
+            this.textBoxCidade.Location = new System.Drawing.Point(17, 211);
             this.textBoxCidade.Name = "textBoxCidade";
             this.textBoxCidade.Size = new System.Drawing.Size(250, 23);
             this.textBoxCidade.TabIndex = 22;
             // 
             // textBoxDescricao
             // 
-            this.textBoxDescricao.Location = new System.Drawing.Point(33, 154);
+            this.textBoxDescricao.Location = new System.Drawing.Point(17, 153);
             this.textBoxDescricao.MaxLength = 40;
             this.textBoxDescricao.Name = "textBoxDescricao";
             this.textBoxDescricao.Size = new System.Drawing.Size(250, 23);
@@ -96,7 +99,7 @@ namespace TrabTransporte.Views
             // labelDescricao
             // 
             this.labelDescricao.AutoSize = true;
-            this.labelDescricao.Location = new System.Drawing.Point(33, 136);
+            this.labelDescricao.Location = new System.Drawing.Point(17, 135);
             this.labelDescricao.Name = "labelDescricao";
             this.labelDescricao.Size = new System.Drawing.Size(58, 15);
             this.labelDescricao.TabIndex = 20;
@@ -104,7 +107,7 @@ namespace TrabTransporte.Views
             // 
             // textBoxCNPJ
             // 
-            this.textBoxCNPJ.Location = new System.Drawing.Point(33, 97);
+            this.textBoxCNPJ.Location = new System.Drawing.Point(17, 96);
             this.textBoxCNPJ.MaxLength = 14;
             this.textBoxCNPJ.Name = "textBoxCNPJ";
             this.textBoxCNPJ.Size = new System.Drawing.Size(100, 23);
@@ -113,7 +116,7 @@ namespace TrabTransporte.Views
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(33, 79);
+            this.labelCodigo.Location = new System.Drawing.Point(17, 78);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(34, 15);
             this.labelCodigo.TabIndex = 18;
@@ -121,9 +124,9 @@ namespace TrabTransporte.Views
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(68, 356);
+            this.btnCancelar.Location = new System.Drawing.Point(52, 355);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(119, 48);
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -131,9 +134,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(149, 356);
+            this.btnSalvar.Location = new System.Drawing.Point(192, 355);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(131, 48);
             this.btnSalvar.TabIndex = 26;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -143,7 +146,7 @@ namespace TrabTransporte.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 450);
+            this.ClientSize = new System.Drawing.Size(403, 426);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label3);
@@ -155,8 +158,9 @@ namespace TrabTransporte.Views
             this.Controls.Add(this.textBoxCNPJ);
             this.Controls.Add(this.labelCodigo);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTransportadoraAlterar";
-            this.Text = "FrmTransportadoraAlterar";
+            this.Text = "Alterar Transportadora";
             this.ResumeLayout(false);
             this.PerformLayout();
 

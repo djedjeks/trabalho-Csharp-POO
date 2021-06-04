@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduto));
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +38,7 @@ namespace TrabTransporte.Views
             this.btnNovoProduto = new System.Windows.Forms.Button();
             this.btnDeletaProduto = new System.Windows.Forms.Button();
             this.btnAlteraProduto = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,11 +52,11 @@ namespace TrabTransporte.Views
             this.codigo,
             this.descricao,
             this.peso});
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(13, 57);
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(13, 67);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.ReadOnly = true;
             this.dataGridViewProdutos.RowTemplate.Height = 25;
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(476, 381);
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(476, 366);
             this.dataGridViewProdutos.TabIndex = 0;
             // 
             // id
@@ -89,9 +91,9 @@ namespace TrabTransporte.Views
             // 
             // btnNovoProduto
             // 
-            this.btnNovoProduto.Location = new System.Drawing.Point(383, 28);
+            this.btnNovoProduto.Location = new System.Drawing.Point(374, 22);
             this.btnNovoProduto.Name = "btnNovoProduto";
-            this.btnNovoProduto.Size = new System.Drawing.Size(105, 23);
+            this.btnNovoProduto.Size = new System.Drawing.Size(114, 39);
             this.btnNovoProduto.TabIndex = 1;
             this.btnNovoProduto.Text = "Novo Produto";
             this.btnNovoProduto.UseVisualStyleBackColor = true;
@@ -99,9 +101,9 @@ namespace TrabTransporte.Views
             // 
             // btnDeletaProduto
             // 
-            this.btnDeletaProduto.Location = new System.Drawing.Point(383, 444);
+            this.btnDeletaProduto.Location = new System.Drawing.Point(374, 439);
             this.btnDeletaProduto.Name = "btnDeletaProduto";
-            this.btnDeletaProduto.Size = new System.Drawing.Size(105, 23);
+            this.btnDeletaProduto.Size = new System.Drawing.Size(114, 44);
             this.btnDeletaProduto.TabIndex = 2;
             this.btnDeletaProduto.Text = "Deletar Produto";
             this.btnDeletaProduto.UseVisualStyleBackColor = true;
@@ -109,27 +111,42 @@ namespace TrabTransporte.Views
             // 
             // btnAlteraProduto
             // 
-            this.btnAlteraProduto.Location = new System.Drawing.Point(272, 444);
+            this.btnAlteraProduto.Location = new System.Drawing.Point(251, 439);
             this.btnAlteraProduto.Name = "btnAlteraProduto";
-            this.btnAlteraProduto.Size = new System.Drawing.Size(105, 23);
+            this.btnAlteraProduto.Size = new System.Drawing.Size(117, 44);
             this.btnAlteraProduto.TabIndex = 3;
             this.btnAlteraProduto.Text = "Alterar Produto";
             this.btnAlteraProduto.UseVisualStyleBackColor = true;
             this.btnAlteraProduto.Click += new System.EventHandler(this.btnAlteraProduto_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 42);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Produtos";
+            // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 500);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(509, 487);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAlteraProduto);
             this.Controls.Add(this.btnDeletaProduto);
             this.Controls.Add(this.btnNovoProduto);
             this.Controls.Add(this.dataGridViewProdutos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProduto";
-            this.Text = "FrmProduto";
+            this.Text = "Produtos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,5 +160,6 @@ namespace TrabTransporte.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn peso;
+        private System.Windows.Forms.Label label1;
     }
 }

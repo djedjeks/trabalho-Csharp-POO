@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProdutoNovo));
             this.labelCodigo = new System.Windows.Forms.Label();
             this.textBoxCodigo = new System.Windows.Forms.TextBox();
             this.labelDescricao = new System.Windows.Forms.Label();
@@ -94,9 +95,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(194, 256);
+            this.btnSalvar.Location = new System.Drawing.Point(183, 256);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(116, 48);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -104,9 +105,9 @@ namespace TrabTransporte.Views
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(113, 256);
+            this.btnCancelar.Location = new System.Drawing.Point(39, 256);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(118, 48);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -115,10 +116,12 @@ namespace TrabTransporte.Views
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(33, 9);
+            this.label2.Location = new System.Drawing.Point(50, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 41);
+            this.label2.Size = new System.Drawing.Size(219, 43);
             this.label2.TabIndex = 8;
             this.label2.Text = "Novo Produto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -127,7 +130,7 @@ namespace TrabTransporte.Views
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 291);
+            this.ClientSize = new System.Drawing.Size(333, 331);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -137,8 +140,9 @@ namespace TrabTransporte.Views
             this.Controls.Add(this.labelDescricao);
             this.Controls.Add(this.textBoxCodigo);
             this.Controls.Add(this.labelCodigo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProdutoNovo";
-            this.Text = "FrmProdutoNovo";
+            this.Text = "Novo Produto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

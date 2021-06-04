@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProdutoAlterar));
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -43,19 +44,20 @@ namespace TrabTransporte.Views
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(23, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 41);
+            this.label2.Size = new System.Drawing.Size(241, 43);
             this.label2.TabIndex = 9;
             this.label2.Text = "Alterar Produto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(113, 255);
+            this.btnCancelar.Location = new System.Drawing.Point(46, 250);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 29);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -64,9 +66,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(194, 255);
+            this.btnSalvar.Location = new System.Drawing.Point(139, 250);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(87, 29);
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -137,8 +139,9 @@ namespace TrabTransporte.Views
             this.Controls.Add(this.textBoxCodigo);
             this.Controls.Add(this.labelCodigo);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProdutoAlterar";
-            this.Text = "FrmProdutoAlterar";
+            this.Text = "Alterar Produto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

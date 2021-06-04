@@ -49,10 +49,20 @@ namespace TrabTransporte.Views
                 }
                 else
                 {
-                    MessageBox.Show("Falha ao remover Cliente");
+                    MessageBox.Show("Falha ao remover Cliente.");
                 }
             }
             atualizaTela();
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransportadoraNovo));
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDescricao = new System.Windows.Forms.TextBox();
             this.labelDescricao = new System.Windows.Forms.Label();
@@ -45,10 +46,11 @@ namespace TrabTransporte.Views
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(41, 9);
+            this.label2.Location = new System.Drawing.Point(31, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(318, 41);
+            this.label2.Size = new System.Drawing.Size(320, 43);
             this.label2.TabIndex = 13;
             this.label2.Text = "Nova Transportadora";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -120,15 +122,16 @@ namespace TrabTransporte.Views
             // textBoxEstado
             // 
             this.textBoxEstado.Location = new System.Drawing.Point(20, 268);
+            this.textBoxEstado.MaxLength = 2;
             this.textBoxEstado.Name = "textBoxEstado";
-            this.textBoxEstado.Size = new System.Drawing.Size(250, 23);
+            this.textBoxEstado.Size = new System.Drawing.Size(44, 23);
             this.textBoxEstado.TabIndex = 16;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(73, 321);
+            this.btnCancelar.Location = new System.Drawing.Point(60, 321);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 42);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -136,9 +139,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(154, 321);
+            this.btnSalvar.Location = new System.Drawing.Point(183, 321);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(129, 42);
             this.btnSalvar.TabIndex = 18;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -160,8 +163,9 @@ namespace TrabTransporte.Views
             this.Controls.Add(this.labelDescricao);
             this.Controls.Add(this.textBoxCNPJ);
             this.Controls.Add(this.labelCodigo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmTransportadoraNovo";
-            this.Text = "FrmTransportadoraNovo";
+            this.Text = "Nova Transportadora";
             this.ResumeLayout(false);
             this.PerformLayout();
 
