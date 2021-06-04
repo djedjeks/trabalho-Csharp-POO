@@ -180,7 +180,6 @@ namespace TrabTransporte.Views
                         } else
                         {
                             MessageBox.Show("Falha ao identificar Produto!");
-                            MessageBox.Show("Produto => " + prodString);
                             return;
                         }
                     }

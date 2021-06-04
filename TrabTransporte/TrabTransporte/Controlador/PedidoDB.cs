@@ -172,7 +172,6 @@ namespace TrabTransporte.Controlador
                     // Realiza uma inserção para cada registro de Item de Pedido
                     foreach (PedidoItem pedidoItem in pedido.PedidoItems)
                     {
-                        MessageBox.Show("Produto a ser alterado: " + pedidoItem.produto.id + " => " + produtosPedido.Contains(pedidoItem.produto.id));
                         if (produtosPedido.Contains(pedidoItem.produto.id))
                         {
                             NpgsqlCommand cmdItem = new NpgsqlCommand("UPDATE PEDIDO_ITEM SET QUANTIDADE = @quantidade, VALOR_UNITARIO = @valor_unitario WHERE PEDIDO_ID = @pedido_id AND PRODUTO_ID = @produto_id", conexao);
