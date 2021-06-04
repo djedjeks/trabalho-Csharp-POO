@@ -173,15 +173,6 @@ namespace TrabTransporte.Views
             }
         }
 
-        //Ao sair de uma celula e a mesma for de quantidade ou de valor, atualiza o valor final
-        private void dataGridViewProdutos_CellLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridViewProdutos.CurrentCell.ColumnIndex == 1 || dataGridViewProdutos.CurrentCell.ColumnIndex == 2)
-            {
-                atualizaValorFinal();
-            }
-        }
-
         private bool validaFormularioCadastro()
         {
 
@@ -310,6 +301,16 @@ namespace TrabTransporte.Views
             {
                 MessageBox.Show("Falha ao identificar Cliente e/ou Transportadora!");
                 return;
+            }
+        }
+
+        //Ao alterar o valor de uma celula e a mesma for de quantidade ou de valor, atualiza o valor final
+        private void dataGridViewProdutos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViewProdutos.CurrentCell != null && 
+                (dataGridViewProdutos.CurrentCell.ColumnIndex == 1 || dataGridViewProdutos.CurrentCell.ColumnIndex == 2))
+            {
+                atualizaValorFinal();
             }
         }
     }

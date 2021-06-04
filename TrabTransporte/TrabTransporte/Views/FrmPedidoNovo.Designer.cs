@@ -37,11 +37,11 @@ namespace TrabTransporte.Views
             this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.comboBoxTransportadora = new System.Windows.Forms.ComboBox();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.lblValorTotal = new System.Windows.Forms.Label();
+            this.textBoxValorTotal = new System.Windows.Forms.TextBox();
             this.produto = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblValorTotal = new System.Windows.Forms.Label();
-            this.textBoxValorTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,33 +122,9 @@ namespace TrabTransporte.Views
             this.dataGridViewProdutos.RowTemplate.Height = 25;
             this.dataGridViewProdutos.Size = new System.Drawing.Size(514, 281);
             this.dataGridViewProdutos.TabIndex = 20;
-            this.dataGridViewProdutos.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellLeave);
+            this.dataGridViewProdutos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellValueChanged);
             this.dataGridViewProdutos.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewProdutos_DefaultValuesNeeded);
             this.dataGridViewProdutos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewProdutos_EditingControlShowing);
-            // 
-            // produto
-            // 
-            this.produto.HeaderText = "Produto";
-            this.produto.MaxDropDownItems = 10;
-            this.produto.Name = "produto";
-            this.produto.Sorted = true;
-            this.produto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.produto.Width = 250;
-            // 
-            // quantidade
-            // 
-            this.quantidade.DataPropertyName = "quantidade";
-            this.quantidade.HeaderText = "Quantidade";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.quantidade.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // valorUnitario
-            // 
-            this.valorUnitario.DataPropertyName = "valorUnitario";
-            this.valorUnitario.HeaderText = "Valor Unitário";
-            this.valorUnitario.Name = "valorUnitario";
-            this.valorUnitario.Width = 120;
             // 
             // lblValorTotal
             // 
@@ -169,6 +145,29 @@ namespace TrabTransporte.Views
             this.textBoxValorTotal.Size = new System.Drawing.Size(249, 36);
             this.textBoxValorTotal.TabIndex = 22;
             this.textBoxValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // produto
+            // 
+            this.produto.HeaderText = "Produto";
+            this.produto.MaxDropDownItems = 10;
+            this.produto.Name = "produto";
+            this.produto.Sorted = true;
+            this.produto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.produto.Width = 250;
+            // 
+            // quantidade
+            // 
+            this.quantidade.DataPropertyName = "quantidade";
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // valorUnitario
+            // 
+            this.valorUnitario.DataPropertyName = "valorUnitario";
+            this.valorUnitario.HeaderText = "Valor Unitário";
+            this.valorUnitario.Name = "valorUnitario";
+            this.valorUnitario.Width = 120;
             // 
             // FrmPedidoNovo
             // 
