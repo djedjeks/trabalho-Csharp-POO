@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TrabTransporte.Controlador
 {
-    class Conexao
+    public class Conexao
     {
         public static NpgsqlConnection GetConexao()
         {
@@ -16,10 +16,9 @@ namespace TrabTransporte.Controlador
             {
                 conexao = new NpgsqlConnection("Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dt_transporte");
                 conexao.Open();
-            }
-            catch (NpgsqlException e)
+            }catch(NpgsqlException erro)
             {
-                Console.WriteLine("Erro de Conexão: " + e.Message);
+                Console.WriteLine("Erro de conexão: " + erro.Message);
             }
             return conexao;
         }

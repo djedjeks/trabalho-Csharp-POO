@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConFin.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,11 @@ namespace TrabTransporte
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             new FrmPedido().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new RelProduto().ShowDialog();
         }
     }
 }

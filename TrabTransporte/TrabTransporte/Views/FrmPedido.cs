@@ -32,7 +32,7 @@ namespace TrabTransporte.Views
                     pedido.cliente.nome_completo,
                     pedido.transportadora.descricao,
                     pedido.data_emissao,
-                    pedido.data_entrega == DateTime.MinValue ? "" : pedido.data_entrega,
+                    pedido.data_entrega,
                     pedido.valor_total
                     );
             }

@@ -9,7 +9,7 @@ namespace TrabTransporte.Modelo
     public class Cliente
     {
         public int id { get; set; }
-        public string nome_completo{ get; set; }
+        public string nome_completo { get; set; }
         public string cpf { get; set; }
         public DateTime data_nascimento { get; set; }
         public char sexo { get; set; }

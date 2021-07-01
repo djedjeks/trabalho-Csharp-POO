@@ -9,7 +9,7 @@ namespace TrabTransporte.Modelo
     public class Transportadora
     {
 
-        public int id{ get; set; }
+        public int id { get; set; }
         public string cnpj { get; set; }
         public string descricao { get; set; }
         public string cidade { get; set; }
