@@ -1,5 +1,5 @@
 ﻿
-namespace ConFin.Views
+namespace TrabTransporte.Views
 {
     partial class RelProduto
     {

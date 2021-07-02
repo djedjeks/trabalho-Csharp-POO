@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using TrabTransporte.Controlador;
 using TrabTransporte.Modelo;
 
-namespace ConFin.Views
+namespace TrabTransporte.Views
 {
     public partial class RelProduto : Form
     {

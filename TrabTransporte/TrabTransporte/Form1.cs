@@ -1,5 +1,4 @@
-﻿using ConFin.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,6 +41,16 @@ namespace TrabTransporte
         private void button1_Click(object sender, EventArgs e)
         {
             new RelProduto().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new RelCliente().ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new RelTransportadora().ShowDialog();
         }
     }
 }
