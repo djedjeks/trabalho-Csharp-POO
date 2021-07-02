@@ -47,8 +47,8 @@ namespace TrabTransporte.Views
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(30, 19);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(22, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(344, 43);
             this.label2.TabIndex = 16;
@@ -58,75 +58,75 @@ namespace TrabTransporte.Views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 248);
+            this.label3.Location = new System.Drawing.Point(15, 215);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 15);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "Estado";
             // 
             // textBoxEstado
             // 
-            this.textBoxEstado.Location = new System.Drawing.Point(17, 269);
+            this.textBoxEstado.Location = new System.Drawing.Point(15, 233);
             this.textBoxEstado.MaxLength = 2;
             this.textBoxEstado.Name = "textBoxEstado";
-            this.textBoxEstado.Size = new System.Drawing.Size(42, 23);
+            this.textBoxEstado.Size = new System.Drawing.Size(37, 20);
             this.textBoxEstado.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 190);
+            this.label1.Location = new System.Drawing.Point(15, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "Cidade";
             // 
             // textBoxCidade
             // 
-            this.textBoxCidade.Location = new System.Drawing.Point(17, 211);
+            this.textBoxCidade.Location = new System.Drawing.Point(15, 183);
             this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.Size = new System.Drawing.Size(250, 23);
+            this.textBoxCidade.Size = new System.Drawing.Size(215, 20);
             this.textBoxCidade.TabIndex = 22;
             // 
             // textBoxDescricao
             // 
-            this.textBoxDescricao.Location = new System.Drawing.Point(17, 153);
+            this.textBoxDescricao.Location = new System.Drawing.Point(15, 133);
             this.textBoxDescricao.MaxLength = 40;
             this.textBoxDescricao.Name = "textBoxDescricao";
-            this.textBoxDescricao.Size = new System.Drawing.Size(250, 23);
+            this.textBoxDescricao.Size = new System.Drawing.Size(215, 20);
             this.textBoxDescricao.TabIndex = 21;
             // 
             // labelDescricao
             // 
             this.labelDescricao.AutoSize = true;
-            this.labelDescricao.Location = new System.Drawing.Point(17, 135);
+            this.labelDescricao.Location = new System.Drawing.Point(15, 117);
             this.labelDescricao.Name = "labelDescricao";
-            this.labelDescricao.Size = new System.Drawing.Size(58, 15);
+            this.labelDescricao.Size = new System.Drawing.Size(55, 13);
             this.labelDescricao.TabIndex = 20;
             this.labelDescricao.Text = "Descrição";
             // 
             // textBoxCNPJ
             // 
-            this.textBoxCNPJ.Location = new System.Drawing.Point(17, 96);
+            this.textBoxCNPJ.Location = new System.Drawing.Point(15, 83);
             this.textBoxCNPJ.MaxLength = 14;
             this.textBoxCNPJ.Name = "textBoxCNPJ";
-            this.textBoxCNPJ.Size = new System.Drawing.Size(100, 23);
+            this.textBoxCNPJ.Size = new System.Drawing.Size(86, 20);
             this.textBoxCNPJ.TabIndex = 19;
             // 
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(17, 78);
+            this.labelCodigo.Location = new System.Drawing.Point(15, 68);
             this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(34, 15);
+            this.labelCodigo.Size = new System.Drawing.Size(34, 13);
             this.labelCodigo.TabIndex = 18;
             this.labelCodigo.Text = "CNPJ";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(52, 355);
+            this.btnCancelar.Location = new System.Drawing.Point(83, 308);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(119, 48);
+            this.btnCancelar.Size = new System.Drawing.Size(102, 42);
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -134,9 +134,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(192, 355);
+            this.btnSalvar.Location = new System.Drawing.Point(203, 308);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(131, 48);
+            this.btnSalvar.Size = new System.Drawing.Size(112, 42);
             this.btnSalvar.TabIndex = 26;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -144,9 +144,9 @@ namespace TrabTransporte.Views
             // 
             // FrmTransportadoraAlterar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 426);
+            this.ClientSize = new System.Drawing.Size(389, 374);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label3);

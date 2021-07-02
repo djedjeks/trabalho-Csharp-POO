@@ -31,6 +31,10 @@ namespace TrabTransporte.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
+            this.btnNovoCliente = new System.Windows.Forms.Button();
+            this.btnAlteraCliente = new System.Windows.Forms.Button();
+            this.btnDeletaCliente = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome_completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,10 +42,6 @@ namespace TrabTransporte.Views
             this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNovoCliente = new System.Windows.Forms.Button();
-            this.btnAlteraCliente = new System.Windows.Forms.Button();
-            this.btnDeletaCliente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,12 +58,55 @@ namespace TrabTransporte.Views
             this.sexo,
             this.cidade,
             this.estado});
-            this.dataGridViewClientes.Location = new System.Drawing.Point(12, 61);
+            this.dataGridViewClientes.Location = new System.Drawing.Point(10, 53);
             this.dataGridViewClientes.Name = "dataGridViewClientes";
             this.dataGridViewClientes.ReadOnly = true;
             this.dataGridViewClientes.RowTemplate.Height = 25;
-            this.dataGridViewClientes.Size = new System.Drawing.Size(716, 381);
+            this.dataGridViewClientes.Size = new System.Drawing.Size(634, 330);
             this.dataGridViewClientes.TabIndex = 1;
+            // 
+            // btnNovoCliente
+            // 
+            this.btnNovoCliente.Location = new System.Drawing.Point(543, 16);
+            this.btnNovoCliente.Name = "btnNovoCliente";
+            this.btnNovoCliente.Size = new System.Drawing.Size(97, 32);
+            this.btnNovoCliente.TabIndex = 2;
+            this.btnNovoCliente.Text = "Novo Cliente";
+            this.btnNovoCliente.UseVisualStyleBackColor = true;
+            this.btnNovoCliente.Click += new System.EventHandler(this.btnNovoCliente_Click);
+            // 
+            // btnAlteraCliente
+            // 
+            this.btnAlteraCliente.Location = new System.Drawing.Point(417, 388);
+            this.btnAlteraCliente.Name = "btnAlteraCliente";
+            this.btnAlteraCliente.Size = new System.Drawing.Size(101, 33);
+            this.btnAlteraCliente.TabIndex = 5;
+            this.btnAlteraCliente.Text = "Alterar Cliente";
+            this.btnAlteraCliente.UseVisualStyleBackColor = true;
+            this.btnAlteraCliente.Click += new System.EventHandler(this.btnAlteraCliente_Click);
+            // 
+            // btnDeletaCliente
+            // 
+            this.btnDeletaCliente.Location = new System.Drawing.Point(537, 388);
+            this.btnDeletaCliente.Name = "btnDeletaCliente";
+            this.btnDeletaCliente.Size = new System.Drawing.Size(107, 33);
+            this.btnDeletaCliente.TabIndex = 4;
+            this.btnDeletaCliente.Text = "Deletar Cliente";
+            this.btnDeletaCliente.UseVisualStyleBackColor = true;
+            this.btnDeletaCliente.Click += new System.EventHandler(this.btnDeletaCliente_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(10, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 42);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Cliente";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // id
             // 
@@ -79,7 +122,7 @@ namespace TrabTransporte.Views
             this.nome_completo.HeaderText = "Nome Completo";
             this.nome_completo.Name = "nome_completo";
             this.nome_completo.ReadOnly = true;
-            this.nome_completo.Width = 200;
+            this.nome_completo.Width = 150;
             // 
             // cpf
             // 
@@ -109,66 +152,23 @@ namespace TrabTransporte.Views
             this.cidade.HeaderText = "Cidade";
             this.cidade.Name = "cidade";
             this.cidade.ReadOnly = true;
-            this.cidade.Width = 150;
+            this.cidade.Width = 120;
             // 
             // estado
             // 
             this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
+            this.estado.HeaderText = "UF";
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
             this.estado.Width = 50;
             // 
-            // btnNovoCliente
-            // 
-            this.btnNovoCliente.Location = new System.Drawing.Point(615, 19);
-            this.btnNovoCliente.Name = "btnNovoCliente";
-            this.btnNovoCliente.Size = new System.Drawing.Size(113, 37);
-            this.btnNovoCliente.TabIndex = 2;
-            this.btnNovoCliente.Text = "Novo Cliente";
-            this.btnNovoCliente.UseVisualStyleBackColor = true;
-            this.btnNovoCliente.Click += new System.EventHandler(this.btnNovoCliente_Click);
-            // 
-            // btnAlteraCliente
-            // 
-            this.btnAlteraCliente.Location = new System.Drawing.Point(463, 448);
-            this.btnAlteraCliente.Name = "btnAlteraCliente";
-            this.btnAlteraCliente.Size = new System.Drawing.Size(118, 38);
-            this.btnAlteraCliente.TabIndex = 5;
-            this.btnAlteraCliente.Text = "Alterar Cliente";
-            this.btnAlteraCliente.UseVisualStyleBackColor = true;
-            this.btnAlteraCliente.Click += new System.EventHandler(this.btnAlteraCliente_Click);
-            // 
-            // btnDeletaCliente
-            // 
-            this.btnDeletaCliente.Location = new System.Drawing.Point(603, 448);
-            this.btnDeletaCliente.Name = "btnDeletaCliente";
-            this.btnDeletaCliente.Size = new System.Drawing.Size(125, 38);
-            this.btnDeletaCliente.TabIndex = 4;
-            this.btnDeletaCliente.Text = "Deletar Cliente";
-            this.btnDeletaCliente.UseVisualStyleBackColor = true;
-            this.btnDeletaCliente.Click += new System.EventHandler(this.btnDeletaCliente_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 42);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Cliente";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // FrmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(765, 491);
+            this.ClientSize = new System.Drawing.Size(656, 426);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAlteraCliente);
             this.Controls.Add(this.btnDeletaCliente);
@@ -190,6 +190,7 @@ namespace TrabTransporte.Views
         private System.Windows.Forms.Button btnNovoCliente;
         private System.Windows.Forms.Button btnAlteraCliente;
         private System.Windows.Forms.Button btnDeletaCliente;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome_completo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
@@ -197,6 +198,5 @@ namespace TrabTransporte.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.Label label1;
     }
 }

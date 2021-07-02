@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedidoNovo));
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -37,30 +38,31 @@ namespace TrabTransporte.Views
             this.comboBoxCliente = new System.Windows.Forms.ComboBox();
             this.comboBoxTransportadora = new System.Windows.Forms.ComboBox();
             this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
-            this.lblValorTotal = new System.Windows.Forms.Label();
-            this.textBoxValorTotal = new System.Windows.Forms.TextBox();
             this.produto = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblValorTotal = new System.Windows.Forms.Label();
+            this.textBoxValorTotal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(33, 9);
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(28, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 41);
+            this.label2.Size = new System.Drawing.Size(202, 43);
             this.label2.TabIndex = 17;
             this.label2.Text = "Novo Pedido";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(626, 364);
+            this.btnCancelar.Location = new System.Drawing.Point(585, 315);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(64, 20);
             this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -68,9 +70,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(707, 364);
+            this.btnSalvar.Location = new System.Drawing.Point(654, 315);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(64, 20);
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -79,35 +81,37 @@ namespace TrabTransporte.Views
             // labelTransportadora
             // 
             this.labelTransportadora.AutoSize = true;
-            this.labelTransportadora.Location = new System.Drawing.Point(12, 134);
+            this.labelTransportadora.BackColor = System.Drawing.Color.Transparent;
+            this.labelTransportadora.Location = new System.Drawing.Point(10, 116);
             this.labelTransportadora.Name = "labelTransportadora";
-            this.labelTransportadora.Size = new System.Drawing.Size(86, 15);
+            this.labelTransportadora.Size = new System.Drawing.Size(79, 13);
             this.labelTransportadora.TabIndex = 11;
             this.labelTransportadora.Text = "Transportadora";
             // 
             // labelCliente
             // 
             this.labelCliente.AutoSize = true;
-            this.labelCliente.Location = new System.Drawing.Point(12, 77);
+            this.labelCliente.BackColor = System.Drawing.Color.Transparent;
+            this.labelCliente.Location = new System.Drawing.Point(10, 67);
             this.labelCliente.Name = "labelCliente";
-            this.labelCliente.Size = new System.Drawing.Size(44, 15);
+            this.labelCliente.Size = new System.Drawing.Size(39, 13);
             this.labelCliente.TabIndex = 9;
             this.labelCliente.Text = "Cliente";
             // 
             // comboBoxCliente
             // 
             this.comboBoxCliente.FormattingEnabled = true;
-            this.comboBoxCliente.Location = new System.Drawing.Point(13, 96);
+            this.comboBoxCliente.Location = new System.Drawing.Point(11, 83);
             this.comboBoxCliente.Name = "comboBoxCliente";
-            this.comboBoxCliente.Size = new System.Drawing.Size(249, 23);
+            this.comboBoxCliente.Size = new System.Drawing.Size(214, 21);
             this.comboBoxCliente.TabIndex = 18;
             // 
             // comboBoxTransportadora
             // 
             this.comboBoxTransportadora.FormattingEnabled = true;
-            this.comboBoxTransportadora.Location = new System.Drawing.Point(12, 152);
+            this.comboBoxTransportadora.Location = new System.Drawing.Point(10, 132);
             this.comboBoxTransportadora.Name = "comboBoxTransportadora";
-            this.comboBoxTransportadora.Size = new System.Drawing.Size(250, 23);
+            this.comboBoxTransportadora.Size = new System.Drawing.Size(215, 21);
             this.comboBoxTransportadora.TabIndex = 19;
             // 
             // dataGridViewProdutos
@@ -117,34 +121,14 @@ namespace TrabTransporte.Views
             this.produto,
             this.quantidade,
             this.valorUnitario});
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(268, 77);
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(230, 67);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.RowTemplate.Height = 25;
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(514, 281);
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(490, 244);
             this.dataGridViewProdutos.TabIndex = 20;
             this.dataGridViewProdutos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellValueChanged);
             this.dataGridViewProdutos.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridViewProdutos_DefaultValuesNeeded);
             this.dataGridViewProdutos.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewProdutos_EditingControlShowing);
-            // 
-            // lblValorTotal
-            // 
-            this.lblValorTotal.AutoSize = true;
-            this.lblValorTotal.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblValorTotal.Location = new System.Drawing.Point(75, 268);
-            this.lblValorTotal.Name = "lblValorTotal";
-            this.lblValorTotal.Size = new System.Drawing.Size(123, 30);
-            this.lblValorTotal.TabIndex = 21;
-            this.lblValorTotal.Text = "Valor Total";
-            // 
-            // textBoxValorTotal
-            // 
-            this.textBoxValorTotal.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBoxValorTotal.Location = new System.Drawing.Point(13, 301);
-            this.textBoxValorTotal.Name = "textBoxValorTotal";
-            this.textBoxValorTotal.ReadOnly = true;
-            this.textBoxValorTotal.Size = new System.Drawing.Size(249, 36);
-            this.textBoxValorTotal.TabIndex = 22;
-            this.textBoxValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // produto
             // 
@@ -169,11 +153,33 @@ namespace TrabTransporte.Views
             this.valorUnitario.Name = "valorUnitario";
             this.valorUnitario.Width = 120;
             // 
+            // lblValorTotal
+            // 
+            this.lblValorTotal.AutoSize = true;
+            this.lblValorTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorTotal.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblValorTotal.Location = new System.Drawing.Point(64, 232);
+            this.lblValorTotal.Name = "lblValorTotal";
+            this.lblValorTotal.Size = new System.Drawing.Size(123, 30);
+            this.lblValorTotal.TabIndex = 21;
+            this.lblValorTotal.Text = "Valor Total";
+            // 
+            // textBoxValorTotal
+            // 
+            this.textBoxValorTotal.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.textBoxValorTotal.Location = new System.Drawing.Point(11, 261);
+            this.textBoxValorTotal.Name = "textBoxValorTotal";
+            this.textBoxValorTotal.ReadOnly = true;
+            this.textBoxValorTotal.Size = new System.Drawing.Size(214, 36);
+            this.textBoxValorTotal.TabIndex = 22;
+            this.textBoxValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmPedidoNovo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 397);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(732, 342);
             this.Controls.Add(this.textBoxValorTotal);
             this.Controls.Add(this.lblValorTotal);
             this.Controls.Add(this.dataGridViewProdutos);
@@ -184,8 +190,9 @@ namespace TrabTransporte.Views
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.labelTransportadora);
             this.Controls.Add(this.labelCliente);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPedidoNovo";
-            this.Text = "FrmPedidoNovo";
+            this.Text = "Novo Pedido";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

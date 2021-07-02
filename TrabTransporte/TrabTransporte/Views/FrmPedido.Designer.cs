@@ -29,6 +29,7 @@ namespace TrabTransporte.Views
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPedido));
             this.dataGridViewPedidos = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,11 +56,11 @@ namespace TrabTransporte.Views
             this.data_emissao,
             this.data_entrega,
             this.valor_total});
-            this.dataGridViewPedidos.Location = new System.Drawing.Point(12, 57);
+            this.dataGridViewPedidos.Location = new System.Drawing.Point(10, 49);
             this.dataGridViewPedidos.Name = "dataGridViewPedidos";
             this.dataGridViewPedidos.ReadOnly = true;
             this.dataGridViewPedidos.RowTemplate.Height = 25;
-            this.dataGridViewPedidos.Size = new System.Drawing.Size(796, 381);
+            this.dataGridViewPedidos.Size = new System.Drawing.Size(797, 330);
             this.dataGridViewPedidos.TabIndex = 2;
             // 
             // id
@@ -109,9 +110,9 @@ namespace TrabTransporte.Views
             // 
             // btnNovoPedido
             // 
-            this.btnNovoPedido.Location = new System.Drawing.Point(703, 28);
+            this.btnNovoPedido.Location = new System.Drawing.Point(715, 23);
             this.btnNovoPedido.Name = "btnNovoPedido";
-            this.btnNovoPedido.Size = new System.Drawing.Size(104, 23);
+            this.btnNovoPedido.Size = new System.Drawing.Size(89, 20);
             this.btnNovoPedido.TabIndex = 3;
             this.btnNovoPedido.Text = "Novo Pedido";
             this.btnNovoPedido.UseVisualStyleBackColor = true;
@@ -119,9 +120,9 @@ namespace TrabTransporte.Views
             // 
             // btnDeletarPedido
             // 
-            this.btnDeletarPedido.Location = new System.Drawing.Point(704, 444);
+            this.btnDeletarPedido.Location = new System.Drawing.Point(715, 385);
             this.btnDeletarPedido.Name = "btnDeletarPedido";
-            this.btnDeletarPedido.Size = new System.Drawing.Size(104, 23);
+            this.btnDeletarPedido.Size = new System.Drawing.Size(89, 20);
             this.btnDeletarPedido.TabIndex = 4;
             this.btnDeletarPedido.Text = "Deletar Pedido";
             this.btnDeletarPedido.UseVisualStyleBackColor = true;
@@ -129,9 +130,9 @@ namespace TrabTransporte.Views
             // 
             // btnAlterarPedido
             // 
-            this.btnAlterarPedido.Location = new System.Drawing.Point(594, 444);
+            this.btnAlterarPedido.Location = new System.Drawing.Point(621, 385);
             this.btnAlterarPedido.Name = "btnAlterarPedido";
-            this.btnAlterarPedido.Size = new System.Drawing.Size(104, 23);
+            this.btnAlterarPedido.Size = new System.Drawing.Size(89, 20);
             this.btnAlterarPedido.TabIndex = 5;
             this.btnAlterarPedido.Text = "AlterarPedido";
             this.btnAlterarPedido.UseVisualStyleBackColor = true;
@@ -139,9 +140,9 @@ namespace TrabTransporte.Views
             // 
             // btnDetalharPedido
             // 
-            this.btnDetalharPedido.Location = new System.Drawing.Point(484, 444);
+            this.btnDetalharPedido.Location = new System.Drawing.Point(527, 385);
             this.btnDetalharPedido.Name = "btnDetalharPedido";
-            this.btnDetalharPedido.Size = new System.Drawing.Size(104, 23);
+            this.btnDetalharPedido.Size = new System.Drawing.Size(89, 20);
             this.btnDetalharPedido.TabIndex = 6;
             this.btnDetalharPedido.Text = "Detalhar Pedido";
             this.btnDetalharPedido.UseVisualStyleBackColor = true;
@@ -149,16 +150,18 @@ namespace TrabTransporte.Views
             // 
             // FrmPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 520);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(819, 409);
             this.Controls.Add(this.btnDetalharPedido);
             this.Controls.Add(this.btnAlterarPedido);
             this.Controls.Add(this.btnDeletarPedido);
             this.Controls.Add(this.btnNovoPedido);
             this.Controls.Add(this.dataGridViewPedidos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPedido";
-            this.Text = "FrmPedido";
+            this.Text = "Pedido";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPedidos)).EndInit();
             this.ResumeLayout(false);
 

@@ -79,9 +79,9 @@ namespace TrabTransporte
             // 
             this.btnPedidos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnPedidos.Font = new System.Drawing.Font("Segoe UI", 50F);
-            this.btnPedidos.Location = new System.Drawing.Point(395, 10);
+            this.btnPedidos.Location = new System.Drawing.Point(348, 10);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(280, 109);
+            this.btnPedidos.Size = new System.Drawing.Size(327, 109);
             this.btnPedidos.TabIndex = 3;
             this.btnPedidos.Text = "PEDIDOS";
             this.btnPedidos.UseVisualStyleBackColor = false;
@@ -90,36 +90,39 @@ namespace TrabTransporte
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(113, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 20);
+            this.button1.Size = new System.Drawing.Size(44, 20);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Produtos";
+            this.button1.Text = "R";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(113, 36);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 20);
+            this.button2.Size = new System.Drawing.Size(44, 20);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Clientes";
+            this.button2.Text = "R";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Location = new System.Drawing.Point(113, 61);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 20);
+            this.button3.Size = new System.Drawing.Size(44, 20);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Transportadoras";
+            this.button3.Text = "R";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

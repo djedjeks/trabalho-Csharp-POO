@@ -31,10 +31,15 @@ namespace TrabTransporte.Views
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelProduto));
             this.ProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ProdutoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProdutoBindingSource
+            // 
+            this.ProdutoBindingSource.DataSource = typeof(TrabTransporte.Modelo.Produto);
             // 
             // reportViewer1
             // 
@@ -49,16 +54,13 @@ namespace TrabTransporte.Views
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ProdutoBindingSource
-            // 
-            this.ProdutoBindingSource.DataSource = typeof(TrabTransporte.Modelo.Produto);
-            // 
             // RelProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RelProduto";
             this.Text = "Relatório de Produtos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

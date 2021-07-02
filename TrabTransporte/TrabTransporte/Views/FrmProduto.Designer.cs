@@ -52,11 +52,11 @@ namespace TrabTransporte.Views
             this.codigo,
             this.descricao,
             this.peso});
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(13, 67);
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(11, 58);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.ReadOnly = true;
             this.dataGridViewProdutos.RowTemplate.Height = 25;
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(476, 366);
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(475, 317);
             this.dataGridViewProdutos.TabIndex = 0;
             // 
             // id
@@ -91,9 +91,9 @@ namespace TrabTransporte.Views
             // 
             // btnNovoProduto
             // 
-            this.btnNovoProduto.Location = new System.Drawing.Point(374, 22);
+            this.btnNovoProduto.Location = new System.Drawing.Point(388, 18);
             this.btnNovoProduto.Name = "btnNovoProduto";
-            this.btnNovoProduto.Size = new System.Drawing.Size(114, 39);
+            this.btnNovoProduto.Size = new System.Drawing.Size(98, 34);
             this.btnNovoProduto.TabIndex = 1;
             this.btnNovoProduto.Text = "Novo Produto";
             this.btnNovoProduto.UseVisualStyleBackColor = true;
@@ -101,9 +101,9 @@ namespace TrabTransporte.Views
             // 
             // btnDeletaProduto
             // 
-            this.btnDeletaProduto.Location = new System.Drawing.Point(374, 439);
+            this.btnDeletaProduto.Location = new System.Drawing.Point(389, 380);
             this.btnDeletaProduto.Name = "btnDeletaProduto";
-            this.btnDeletaProduto.Size = new System.Drawing.Size(114, 44);
+            this.btnDeletaProduto.Size = new System.Drawing.Size(98, 38);
             this.btnDeletaProduto.TabIndex = 2;
             this.btnDeletaProduto.Text = "Deletar Produto";
             this.btnDeletaProduto.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@ namespace TrabTransporte.Views
             // 
             // btnAlteraProduto
             // 
-            this.btnAlteraProduto.Location = new System.Drawing.Point(251, 439);
+            this.btnAlteraProduto.Location = new System.Drawing.Point(283, 380);
             this.btnAlteraProduto.Name = "btnAlteraProduto";
-            this.btnAlteraProduto.Size = new System.Drawing.Size(117, 44);
+            this.btnAlteraProduto.Size = new System.Drawing.Size(100, 38);
             this.btnAlteraProduto.TabIndex = 3;
             this.btnAlteraProduto.Text = "Alterar Produto";
             this.btnAlteraProduto.UseVisualStyleBackColor = true;
@@ -123,8 +123,8 @@ namespace TrabTransporte.Views
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(11, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 42);
             this.label1.TabIndex = 4;
@@ -132,10 +132,10 @@ namespace TrabTransporte.Views
             // 
             // FrmProduto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(509, 487);
+            this.ClientSize = new System.Drawing.Size(498, 431);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAlteraProduto);
             this.Controls.Add(this.btnDeletaProduto);

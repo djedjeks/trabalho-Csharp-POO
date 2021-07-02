@@ -49,78 +49,78 @@ namespace TrabTransporte.Views
             // 
             // textBoxEstado
             // 
-            this.textBoxEstado.Location = new System.Drawing.Point(197, 261);
+            this.textBoxEstado.Location = new System.Drawing.Point(169, 226);
             this.textBoxEstado.MaxLength = 2;
             this.textBoxEstado.Name = "textBoxEstado";
-            this.textBoxEstado.Size = new System.Drawing.Size(44, 23);
+            this.textBoxEstado.Size = new System.Drawing.Size(38, 20);
             this.textBoxEstado.TabIndex = 38;
             // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(197, 243);
+            this.labelEstado.Location = new System.Drawing.Point(169, 211);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(42, 15);
+            this.labelEstado.Size = new System.Drawing.Size(40, 13);
             this.labelEstado.TabIndex = 37;
             this.labelEstado.Text = "Estado";
             // 
             // textBoxCidade
             // 
-            this.textBoxCidade.Location = new System.Drawing.Point(12, 261);
+            this.textBoxCidade.Location = new System.Drawing.Point(10, 226);
             this.textBoxCidade.MaxLength = 40;
             this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.Size = new System.Drawing.Size(179, 23);
+            this.textBoxCidade.Size = new System.Drawing.Size(154, 20);
             this.textBoxCidade.TabIndex = 36;
             // 
             // labelCidade
             // 
             this.labelCidade.AutoSize = true;
-            this.labelCidade.Location = new System.Drawing.Point(12, 243);
+            this.labelCidade.Location = new System.Drawing.Point(10, 211);
             this.labelCidade.Name = "labelCidade";
-            this.labelCidade.Size = new System.Drawing.Size(44, 15);
+            this.labelCidade.Size = new System.Drawing.Size(40, 13);
             this.labelCidade.TabIndex = 35;
             this.labelCidade.Text = "Cidade";
             // 
             // textBoxSexo
             // 
-            this.textBoxSexo.Location = new System.Drawing.Point(159, 199);
+            this.textBoxSexo.Location = new System.Drawing.Point(136, 172);
             this.textBoxSexo.MaxLength = 1;
             this.textBoxSexo.Name = "textBoxSexo";
-            this.textBoxSexo.Size = new System.Drawing.Size(27, 23);
+            this.textBoxSexo.Size = new System.Drawing.Size(24, 20);
             this.textBoxSexo.TabIndex = 34;
             // 
             // labelSexo
             // 
             this.labelSexo.AutoSize = true;
-            this.labelSexo.Location = new System.Drawing.Point(159, 181);
+            this.labelSexo.Location = new System.Drawing.Point(136, 157);
             this.labelSexo.Name = "labelSexo";
-            this.labelSexo.Size = new System.Drawing.Size(32, 15);
+            this.labelSexo.Size = new System.Drawing.Size(31, 13);
             this.labelSexo.TabIndex = 33;
             this.labelSexo.Text = "Sexo";
             // 
             // labelDataNascimento
             // 
             this.labelDataNascimento.AutoSize = true;
-            this.labelDataNascimento.Location = new System.Drawing.Point(12, 181);
+            this.labelDataNascimento.Location = new System.Drawing.Point(10, 157);
             this.labelDataNascimento.Name = "labelDataNascimento";
-            this.labelDataNascimento.Size = new System.Drawing.Size(114, 15);
+            this.labelDataNascimento.Size = new System.Drawing.Size(104, 13);
             this.labelDataNascimento.TabIndex = 32;
             this.labelDataNascimento.Text = "Data de Nascimento";
             // 
             // dateTimePickerDataNascimento
             // 
             this.dateTimePickerDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDataNascimento.Location = new System.Drawing.Point(13, 199);
+            this.dateTimePickerDataNascimento.Location = new System.Drawing.Point(11, 172);
             this.dateTimePickerDataNascimento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDataNascimento.Name = "dateTimePickerDataNascimento";
-            this.dateTimePickerDataNascimento.Size = new System.Drawing.Size(113, 23);
+            this.dateTimePickerDataNascimento.Size = new System.Drawing.Size(97, 20);
             this.dateTimePickerDataNascimento.TabIndex = 31;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(25, 303);
+            this.btnCancelar.Location = new System.Drawing.Point(21, 263);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(108, 36);
+            this.btnCancelar.Size = new System.Drawing.Size(93, 31);
             this.btnCancelar.TabIndex = 30;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(154, 303);
+            this.btnSalvar.Location = new System.Drawing.Point(132, 263);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(108, 36);
+            this.btnSalvar.Size = new System.Drawing.Size(93, 31);
             this.btnSalvar.TabIndex = 29;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -138,35 +138,35 @@ namespace TrabTransporte.Views
             // 
             // textBoxNomeCompleto
             // 
-            this.textBoxNomeCompleto.Location = new System.Drawing.Point(12, 143);
+            this.textBoxNomeCompleto.Location = new System.Drawing.Point(10, 124);
             this.textBoxNomeCompleto.MaxLength = 40;
             this.textBoxNomeCompleto.Name = "textBoxNomeCompleto";
-            this.textBoxNomeCompleto.Size = new System.Drawing.Size(250, 23);
+            this.textBoxNomeCompleto.Size = new System.Drawing.Size(215, 20);
             this.textBoxNomeCompleto.TabIndex = 28;
             // 
             // labelNomeCompleto
             // 
             this.labelNomeCompleto.AutoSize = true;
-            this.labelNomeCompleto.Location = new System.Drawing.Point(12, 125);
+            this.labelNomeCompleto.Location = new System.Drawing.Point(10, 108);
             this.labelNomeCompleto.Name = "labelNomeCompleto";
-            this.labelNomeCompleto.Size = new System.Drawing.Size(96, 15);
+            this.labelNomeCompleto.Size = new System.Drawing.Size(82, 13);
             this.labelNomeCompleto.TabIndex = 27;
             this.labelNomeCompleto.Text = "Nome Completo";
             // 
             // textBoxCpf
             // 
-            this.textBoxCpf.Location = new System.Drawing.Point(12, 86);
+            this.textBoxCpf.Location = new System.Drawing.Point(10, 75);
             this.textBoxCpf.MaxLength = 11;
             this.textBoxCpf.Name = "textBoxCpf";
-            this.textBoxCpf.Size = new System.Drawing.Size(100, 23);
+            this.textBoxCpf.Size = new System.Drawing.Size(86, 20);
             this.textBoxCpf.TabIndex = 26;
             // 
             // labelCpf
             // 
             this.labelCpf.AutoSize = true;
-            this.labelCpf.Location = new System.Drawing.Point(12, 68);
+            this.labelCpf.Location = new System.Drawing.Point(10, 59);
             this.labelCpf.Name = "labelCpf";
-            this.labelCpf.Size = new System.Drawing.Size(28, 15);
+            this.labelCpf.Size = new System.Drawing.Size(27, 13);
             this.labelCpf.TabIndex = 25;
             this.labelCpf.Text = "CPF";
             // 
@@ -174,8 +174,8 @@ namespace TrabTransporte.Views
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(30, 10);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(20, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(225, 43);
             this.label2.TabIndex = 24;
@@ -184,9 +184,9 @@ namespace TrabTransporte.Views
             // 
             // FrmClienteAlterar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 349);
+            this.ClientSize = new System.Drawing.Size(266, 302);
             this.Controls.Add(this.textBoxEstado);
             this.Controls.Add(this.labelEstado);
             this.Controls.Add(this.textBoxCidade);

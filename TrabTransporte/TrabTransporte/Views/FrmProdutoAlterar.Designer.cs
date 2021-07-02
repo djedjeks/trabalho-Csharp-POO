@@ -45,8 +45,8 @@ namespace TrabTransporte.Views
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(23, 9);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(20, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(241, 43);
             this.label2.TabIndex = 9;
@@ -55,9 +55,9 @@ namespace TrabTransporte.Views
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(46, 250);
+            this.btnCancelar.Location = new System.Drawing.Point(64, 217);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 29);
+            this.btnCancelar.Size = new System.Drawing.Size(75, 25);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@ namespace TrabTransporte.Views
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(139, 250);
+            this.btnSalvar.Location = new System.Drawing.Point(144, 217);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(87, 29);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 25);
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -76,60 +76,60 @@ namespace TrabTransporte.Views
             // 
             // textBoxPeso
             // 
-            this.textBoxPeso.Location = new System.Drawing.Point(12, 206);
+            this.textBoxPeso.Location = new System.Drawing.Point(10, 179);
             this.textBoxPeso.MaxLength = 15;
             this.textBoxPeso.Name = "textBoxPeso";
-            this.textBoxPeso.Size = new System.Drawing.Size(100, 23);
+            this.textBoxPeso.Size = new System.Drawing.Size(86, 20);
             this.textBoxPeso.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 188);
+            this.label1.Location = new System.Drawing.Point(10, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 15);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Peso (em KG)";
             // 
             // textBoxDescricao
             // 
-            this.textBoxDescricao.Location = new System.Drawing.Point(12, 151);
+            this.textBoxDescricao.Location = new System.Drawing.Point(10, 131);
             this.textBoxDescricao.MaxLength = 40;
             this.textBoxDescricao.Name = "textBoxDescricao";
-            this.textBoxDescricao.Size = new System.Drawing.Size(250, 23);
+            this.textBoxDescricao.Size = new System.Drawing.Size(215, 20);
             this.textBoxDescricao.TabIndex = 13;
             // 
             // labelDescricao
             // 
             this.labelDescricao.AutoSize = true;
-            this.labelDescricao.Location = new System.Drawing.Point(12, 133);
+            this.labelDescricao.Location = new System.Drawing.Point(10, 115);
             this.labelDescricao.Name = "labelDescricao";
-            this.labelDescricao.Size = new System.Drawing.Size(121, 15);
+            this.labelDescricao.Size = new System.Drawing.Size(110, 13);
             this.labelDescricao.TabIndex = 12;
             this.labelDescricao.Text = "Descrição do Produto";
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(12, 94);
+            this.textBoxCodigo.Location = new System.Drawing.Point(10, 81);
             this.textBoxCodigo.MaxLength = 14;
             this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(100, 23);
+            this.textBoxCodigo.Size = new System.Drawing.Size(86, 20);
             this.textBoxCodigo.TabIndex = 11;
             // 
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(12, 76);
+            this.labelCodigo.Location = new System.Drawing.Point(10, 66);
             this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(97, 15);
+            this.labelCodigo.Size = new System.Drawing.Size(88, 13);
             this.labelCodigo.TabIndex = 10;
             this.labelCodigo.Text = "Código de Barras";
             // 
             // FrmProdutoAlterar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 291);
+            this.ClientSize = new System.Drawing.Size(292, 266);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.textBoxPeso);

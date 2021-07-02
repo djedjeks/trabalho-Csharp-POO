@@ -31,14 +31,14 @@ namespace TrabTransporte.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransportadora));
             this.dataGridViewTransportadoras = new System.Windows.Forms.DataGridView();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.buttonAlterar = new System.Windows.Forms.Button();
-            this.btnDeletar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.buttonAlterar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTransportadoras)).BeginInit();
             this.SuspendLayout();
@@ -54,42 +54,12 @@ namespace TrabTransporte.Views
             this.descricao,
             this.cidade,
             this.estado});
-            this.dataGridViewTransportadoras.Location = new System.Drawing.Point(12, 61);
+            this.dataGridViewTransportadoras.Location = new System.Drawing.Point(10, 53);
             this.dataGridViewTransportadoras.Name = "dataGridViewTransportadoras";
             this.dataGridViewTransportadoras.ReadOnly = true;
             this.dataGridViewTransportadoras.RowTemplate.Height = 25;
-            this.dataGridViewTransportadoras.Size = new System.Drawing.Size(577, 383);
+            this.dataGridViewTransportadoras.Size = new System.Drawing.Size(574, 332);
             this.dataGridViewTransportadoras.TabIndex = 1;
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(611, 61);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(104, 38);
-            this.btnNovo.TabIndex = 2;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // buttonAlterar
-            // 
-            this.buttonAlterar.Location = new System.Drawing.Point(611, 105);
-            this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(104, 35);
-            this.buttonAlterar.TabIndex = 3;
-            this.buttonAlterar.Text = "Alterar";
-            this.buttonAlterar.UseVisualStyleBackColor = true;
-            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Location = new System.Drawing.Point(611, 150);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(104, 39);
-            this.btnDeletar.TabIndex = 4;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // id
             // 
@@ -129,12 +99,42 @@ namespace TrabTransporte.Views
             this.estado.ReadOnly = true;
             this.estado.Width = 80;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(590, 53);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(89, 33);
+            this.btnNovo.TabIndex = 2;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // buttonAlterar
+            // 
+            this.buttonAlterar.Location = new System.Drawing.Point(590, 91);
+            this.buttonAlterar.Name = "buttonAlterar";
+            this.buttonAlterar.Size = new System.Drawing.Size(89, 30);
+            this.buttonAlterar.TabIndex = 3;
+            this.buttonAlterar.Text = "Alterar";
+            this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(590, 130);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(89, 34);
+            this.btnDeletar.TabIndex = 4;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(10, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(246, 42);
             this.label1.TabIndex = 5;
@@ -143,10 +143,10 @@ namespace TrabTransporte.Views
             // 
             // FrmTransportadora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(727, 450);
+            this.ClientSize = new System.Drawing.Size(722, 415);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.buttonAlterar);

@@ -44,60 +44,60 @@ namespace TrabTransporte.Views
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Location = new System.Drawing.Point(12, 77);
+            this.labelCodigo.Location = new System.Drawing.Point(10, 67);
             this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(97, 15);
+            this.labelCodigo.Size = new System.Drawing.Size(88, 13);
             this.labelCodigo.TabIndex = 0;
             this.labelCodigo.Text = "Código de Barras";
             // 
             // textBoxCodigo
             // 
-            this.textBoxCodigo.Location = new System.Drawing.Point(12, 95);
+            this.textBoxCodigo.Location = new System.Drawing.Point(10, 82);
             this.textBoxCodigo.MaxLength = 14;
             this.textBoxCodigo.Name = "textBoxCodigo";
-            this.textBoxCodigo.Size = new System.Drawing.Size(100, 23);
+            this.textBoxCodigo.Size = new System.Drawing.Size(86, 20);
             this.textBoxCodigo.TabIndex = 1;
             // 
             // labelDescricao
             // 
             this.labelDescricao.AutoSize = true;
-            this.labelDescricao.Location = new System.Drawing.Point(12, 134);
+            this.labelDescricao.Location = new System.Drawing.Point(10, 116);
             this.labelDescricao.Name = "labelDescricao";
-            this.labelDescricao.Size = new System.Drawing.Size(121, 15);
+            this.labelDescricao.Size = new System.Drawing.Size(110, 13);
             this.labelDescricao.TabIndex = 2;
             this.labelDescricao.Text = "Descrição do Produto";
             // 
             // textBoxDescricao
             // 
-            this.textBoxDescricao.Location = new System.Drawing.Point(12, 152);
+            this.textBoxDescricao.Location = new System.Drawing.Point(10, 132);
             this.textBoxDescricao.MaxLength = 40;
             this.textBoxDescricao.Name = "textBoxDescricao";
-            this.textBoxDescricao.Size = new System.Drawing.Size(250, 23);
+            this.textBoxDescricao.Size = new System.Drawing.Size(215, 20);
             this.textBoxDescricao.TabIndex = 3;
             // 
             // textBoxPeso
             // 
-            this.textBoxPeso.Location = new System.Drawing.Point(12, 207);
+            this.textBoxPeso.Location = new System.Drawing.Point(10, 179);
             this.textBoxPeso.MaxLength = 15;
             this.textBoxPeso.Name = "textBoxPeso";
-            this.textBoxPeso.Size = new System.Drawing.Size(100, 23);
+            this.textBoxPeso.Size = new System.Drawing.Size(86, 20);
             this.textBoxPeso.TabIndex = 5;
             this.textBoxPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPeso_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 189);
+            this.label1.Location = new System.Drawing.Point(10, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 15);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Peso (em KG)";
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(183, 256);
+            this.btnSalvar.Location = new System.Drawing.Point(157, 222);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(116, 48);
+            this.btnSalvar.Size = new System.Drawing.Size(99, 42);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@ namespace TrabTransporte.Views
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(39, 256);
+            this.btnCancelar.Location = new System.Drawing.Point(33, 222);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(118, 48);
+            this.btnCancelar.Size = new System.Drawing.Size(101, 42);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -118,8 +118,8 @@ namespace TrabTransporte.Views
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(50, 9);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(34, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 43);
             this.label2.TabIndex = 8;
@@ -128,9 +128,9 @@ namespace TrabTransporte.Views
             // 
             // FrmProdutoNovo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 331);
+            this.ClientSize = new System.Drawing.Size(285, 287);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
